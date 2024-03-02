@@ -1,3 +1,35 @@
+@import url("https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  body {
+    @apply font-Mulish;
+  }
+  header,
+  main {
+    @apply w-11/12 md:w-4/5 lg:max-w-[1170px] mx-auto;
+  }
+  h1,
+  h2 {
+    @apply text-drak-color font-extrabold text-2xl lg:text-4xl;
+  }
+  h3 {
+    @apply text-drak-color font-bold text-2xl;
+  }
+  p,
+  a {
+    @apply text-gray-color text-[14px]  md:text-sm lg:font-medium;
+  }
+}
+
+@layer components {
+  .background {
+    background: linear-gradient(90deg, #12132d, #12132d),
+      url("images/bgbanner.png");
+  }
+  section {
+    @apply my-20;
+  }
+}
