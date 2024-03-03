@@ -5,7 +5,7 @@ module.exports = {
     colors: {
       "drak-color": "#030712",
       "light-color": "#FFFFFF",
-      "gray-color": "#808080",
+      "gray-color": "#12132D99",
     },
     fontFamily: {
       // raliway: ["Raleway", "sans-serif"],
