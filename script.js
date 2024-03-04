@@ -29,6 +29,7 @@ const searchdata = async (category) => {
     const data = await res.json();
     const posts = data.posts;
     lodderEl.classList.add("hidden");
+    errowEl.classList.add("hidden");
     if (posts.length === 0) {
       lodderEl.classList.add("hidden");
       errowEl.classList.remove("hidden");
@@ -51,6 +52,7 @@ const findForumData = async (category, isData) => {
     const posts = data.posts;
 
     lodderEl.classList.add("hidden");
+    errowEl.classList.add("hidden");
     if (isData === "all") {
       createForum(posts);
     } else if (isData === "latest") {
