@@ -37,10 +37,10 @@ function createForum(posts) {
   for (let data of posts) {
     const div = document.createElement("div");
     div.className =
-      "bg-[#797DFC1A] p-6  rounded-2xl flex gap-5 hover:border-2 hover:border-[#797DFC] hover:bg-[#797DFC21] cursor-pointer";
+      "bg-[#797DFC1A] p-6  rounded-2xl flex flex-col md:flex-row gap-5 hover:border-2 hover:border-[#797DFC] hover:bg-[#797DFC21] cursor-pointer";
     div.innerHTML = `
     <!-- profile -->
-                <div class="w-16 h-16 rounded-xl bg-light-color relative">
+                <div class="w-16 h-16 rounded-xl bg-light-color relative mx-auto">
                     <img src="https://cdn-icons-png.flaticon.com/512/3001/3001758.png" alt="" class="w-auto h-auto">
                     <span id="online" class="w-3 h-3 ${
                       data.isActive ? "bg-[#10B981]" : "bg-[#FF3434]"
@@ -49,7 +49,7 @@ function createForum(posts) {
                <!-- details -->
                <div class="w-full">
                 <div class="pb-5 border-b-2  border-dashed border-gray-color">
-                <p class="font-extrabold"># <span class="mr-4">${
+                <p class="font-extrabold"># <span class="mr-6">${
                   data.category
                 }</span>  Designation:  <span>${data.author.name}</span></p>
                 <h3 class="font-bold">${data.title}</h>
@@ -127,6 +127,8 @@ function latestForum(posts) {
     latestContainer.appendChild(div);
   }
 }
+
+// search forum here
 
 findForumData("posts", allData);
 findForumData("latest-posts", latestData);
