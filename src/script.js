@@ -11,6 +11,7 @@
 
 const viewListContainer = document.getElementById("marks-container");
 const latestContainer = document.getElementById("latest-container");
+const allFormContainer = document.getElementById("all-card-contianer");
 const lodderEl = document.getElementById("lodder");
 const errowEl = document.getElementById("errow");
 const errorName = document.getElementById("errow-name");
@@ -27,6 +28,7 @@ const searchdata = async (category) => {
     );
     const data = await res.json();
     const posts = data.posts;
+    lodderEl.classList.add("hidden");
     if (posts.length === 0) {
       lodderEl.classList.add("hidden");
       errowEl.classList.remove("hidden");
@@ -55,7 +57,6 @@ const findForumData = async (category, isData) => {
       latestForum(data);
     }
   } catch (error) {
-    lodderEl.classList.add("hidden");
     errowEl.classList.remove("hidden");
     errorName.innerText = error.message;
   }
@@ -64,7 +65,7 @@ const findForumData = async (category, isData) => {
 // create forum all or search
 function createForum(posts) {
   console.log(posts);
-  const allFormContainer = document.getElementById("all-card-contianer");
+
   for (let data of posts) {
     const div = document.createElement("div");
     div.className =
@@ -164,6 +165,7 @@ function searchForum() {
   const searchEl = document.getElementById("search-file");
   const search = searchEl.value;
   const searchText = search.trim().toLowerCase();
+  allFormContainer.innerHTML = "";
   if (searchText) {
     lodderEl.classList.remove("hidden");
     setTimeout(() => {
@@ -172,12 +174,5 @@ function searchForum() {
   }
 }
 
-// 2 s delay call
-lodderEl.classList.remove("hidden");
-setTimeout(() => {
-  findForumData("posts", allData);
-  findForumData("latest-posts", latestData);
-}, 2000);
-
-// findForumData("posts", allData);
-// findForumData("latest-posts", latestData);
+findForumData("posts", allData);
+findForumData("latest-posts", latestData);
