@@ -21,9 +21,9 @@
       <nav
         class="flex text-center items-center space-y-5 flex-col sm:flex-row justify-between py-5"
       >
-        <h1>ReTro</h1>
+        <h1 class="text-4xl">ReTro</h1>
         <div
-          class="flex mx-auto md:mx-0 items-center gap-5 [&>a]:h-12 [&>a]:w-12 [&>a]:flex [&>a]:justify-center [&>a]:items-center [&>a]:rounded-full [&>a]:border-2 [&>a]:border-[#e2e2e2]"
+          class="flex mx-auto md:mx-0 items-center gap-5 [&>a]:size-10 md:[&>a]:size-12 [&>a]:flex [&>a]:justify-center [&>a]:items-center [&>a]:rounded-full [&>a]:border-2 [&>a]:border-[#e2e2e2]"
         >
           <a href="#" class="tooltip hover:bg-[#797DFC26]" data-tip="Home"><i class="fa-solid fa-house hover:bg-[#797DFC26]"></i></a>
           <a href="#" class="tooltip hover:bg-[#797DFC26]" data-tip="Edit"><i class="fa-solid fa-pen"></i></a>
@@ -40,14 +40,14 @@
 
       <!-- banner section star -->
       <section class="mt-7" >
-        <div class="bg-[#12132D] md:h-[550px] w-full rounded-3xl relative flex items-center justify-center p-20 ">
+        <div class="bg-[#12132D] md:h-[550px] w-full rounded-3xl relative flex items-center justify-center p-5 md:p-20 ">
           <img src="images/bgbanner.png" alt="" class="absolute bottom-0" />
 
           <!-- banner contain -->
           <div class="flex flex-col md:flex-row justify-between gap-20 text-center md:text-left">
             <!-- left side -->
             <div class="space-y-5" >
-              <h1 class="text-light-color md:text-6xl   leading-snug font-extrabold">Welcome to the <br /><span class="text-[#797DFC]">ReTro</span> Forum</h1>
+              <h1 class="text-light-color md:text-6xl text-4xl  leading-snug font-extrabold">Welcome to the <br /><span class="text-[#797DFC]">ReTro</span> Forum</h1>
               <p class="text-light-color text-xl">
                 Share your favorite opinion and win and wp forum coffee mug!
               </p>
@@ -63,9 +63,9 @@
               </div>
             </div>
             <!-- right side -->
-            <div class=" w-[370px]  [&>span]:flex [&>span]:justify-between bg-light-color p-10 rounded-3xl space-y-3">
+            <div class=" w-full mx-auto md:w-[370px]  [&>span]:flex [&>span]:justify-between bg-light-color p-10 rounded-3xl space-y-3">
                 <span >
-                    <h3 >Registered Users</h1>
+                    <h3 class="text-nowrap">Registered Users</h1>
                     <h3 >01</h3>
                 </span>
                 <span>
@@ -171,13 +171,13 @@
         <div class=" bg-[#0A1F4E]  rounded-3xl  md:h-[400px] flex justify-center p-5">
           <div class="flex flex-col md:flex-row justify-between items-center gap-10">
              <!-- left -->
-             <div class="space-y-5 ml-5">
+             <div class="space-y-5 ml-5 text-center md:text-left">
               <h1 class="text-light-color font-extrabold">Join Our Forum</h1>
               <p class="text-light-color font-extrabold">Share your favorite opinion and win and wp forum coffee mug! Yes, you <br> can run unit tests and view the results directly within the app. </p>
               <button
             class="btn  bg-[#797DFC] text-light-color font-extrabold rounded-full px-7"
           >
-            Sign In
+            Registered Now
           </button>
              </div>
              <!-- right -->
@@ -241,7 +241,9 @@
             <i class="fa-brands fa-instagram"></i>
             <i class="fa-brands fa-github"></i>
           </div>
-          <p class="pt-12">2017, All Rights Reserved.</p>
+           <h1 class="w-11/12 mx-auto bg-gray-color 
+           h-[1px] mt-6"></h1>
+          <p class="pt-6">2017, All Rights Reserved.</p>
         </div>
     </section>
     </footer>

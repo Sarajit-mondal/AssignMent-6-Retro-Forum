@@ -74,7 +74,7 @@ function createForum(posts) {
       "bg-[#797DFC1A] p-6  rounded-2xl flex flex-col md:flex-row gap-5 hover:border-2 hover:border-[#797DFC] hover:bg-[#797DFC21] cursor-pointer shadow-xl";
     div.innerHTML = `
     <!-- profile -->
-                <div class="w-16 h-16 rounded-xl bg-light-color relative mx-auto">
+                <div class="size-[72px] md:size-16 rounded-xl bg-light-color relative mx-auto">
                     <img src="https://cdn-icons-png.flaticon.com/512/3001/3001758.png" alt="" class="w-auto h-auto">
                     <span id="online" class="w-3 h-3 ${
                       data.isActive ? "bg-[#10B981]" : "bg-[#FF3434]"

@@ -1716,14 +1716,8 @@ section{
   margin-bottom: 1.25rem;
 }
 
-.my-20{
-  margin-top: 5rem;
-  margin-bottom: 5rem;
-}
-
-.my-28{
-  margin-top: 7rem;
-  margin-bottom: 7rem;
+.mb-40{
+  margin-bottom: 10rem;
 }
 
 .ml-5{
@@ -1734,32 +1728,24 @@ section{
   margin-right: 0.5rem;
 }
 
-.mr-4{
-  margin-right: 1rem;
+.mr-6{
+  margin-right: 1.5rem;
 }
 
 .mt-10{
   margin-top: 2.5rem;
 }
 
+.mt-5{
+  margin-top: 1.25rem;
+}
+
 .mt-7{
   margin-top: 1.75rem;
 }
 
-.mr-6{
-  margin-right: 1.5rem;
-}
-
-.mb-28{
-  margin-bottom: 7rem;
-}
-
-.mb-40{
-  margin-bottom: 10rem;
-}
-
-.mt-5{
-  margin-top: 1.25rem;
+.mt-6{
+  margin-top: 1.5rem;
 }
 
 .block{
@@ -1774,6 +1760,11 @@ section{
   display: none;
 }
 
+.size-\[72px\]{
+  width: 72px;
+  height: 72px;
+}
+
 .h-11{
   height: 2.75rem;
 }
@@ -1786,6 +1777,10 @@ section{
   height: 0.75rem;
 }
 
+.h-60{
+  height: 15rem;
+}
+
 .h-7{
   height: 1.75rem;
 }
@@ -1794,8 +1789,16 @@ section{
   height: auto;
 }
 
-.h-60{
-  height: 15rem;
+.h-1{
+  height: 0.25rem;
+}
+
+.h-\[2px\]{
+  height: 2px;
+}
+
+.h-\[1px\]{
+  height: 1px;
 }
 
 .w-11{
@@ -1806,16 +1809,20 @@ section{
   width: 4rem;
 }
 
+.w-2\/4{
+  width: 50%;
+}
+
+.w-28{
+  width: 7rem;
+}
+
 .w-3{
   width: 0.75rem;
 }
 
 .w-7{
   width: 1.75rem;
-}
-
-.w-\[370px\]{
-  width: 370px;
 }
 
 .w-auto{
@@ -1826,16 +1833,8 @@ section{
   width: 100%;
 }
 
-.w-40{
-  width: 10rem;
-}
-
-.w-28{
-  width: 7rem;
-}
-
-.w-2\/4{
-  width: 50%;
+.w-11\/12{
+  width: 91.666667%;
 }
 
 .max-w-xs{
@@ -1929,6 +1928,10 @@ section{
   margin-bottom: calc(1.5rem * var(--tw-space-y-reverse));
 }
 
+.text-nowrap{
+  text-wrap: nowrap;
+}
+
 .rounded-2xl{
   border-radius: 1rem;
 }
@@ -1992,6 +1995,10 @@ section{
   background-color: #797DFC1D;
 }
 
+.bg-\[\#797DFC21\]{
+  background-color: #797DFC21;
+}
+
 .bg-\[\#797DFC\]{
   --tw-bg-opacity: 1;
   background-color: rgb(121 125 252 / var(--tw-bg-opacity));
@@ -2012,8 +2019,8 @@ section{
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
-.bg-\[\#797DFC21\]{
-  background-color: #797DFC21;
+.bg-gray-color{
+  background-color: #12132D99;
 }
 
 .p-1{
@@ -2050,6 +2057,16 @@ section{
   padding-bottom: 1.25rem;
 }
 
+.py-3{
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+}
+
+.py-1{
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+}
+
 .pb-5{
   padding-bottom: 1.25rem;
 }
@@ -2060,6 +2077,10 @@ section{
 
 .pt-5{
   padding-top: 1.25rem;
+}
+
+.pt-6{
+  padding-top: 1.5rem;
 }
 
 .text-center{
@@ -2108,6 +2129,11 @@ section{
   color: rgb(121 125 252 / var(--tw-text-opacity));
 }
 
+.text-accent{
+  --tw-text-opacity: 1;
+  color: var(--fallback-a,oklch(var(--a)/var(--tw-text-opacity)));
+}
+
 .text-gray-color{
   color: #12132D99;
 }
@@ -2117,20 +2143,15 @@ section{
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
-.text-accent{
-  --tw-text-opacity: 1;
-  color: var(--fallback-a,oklch(var(--a)/var(--tw-text-opacity)));
+.shadow-2xl{
+  --tw-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+  --tw-shadow-colored: 0 25px 50px -12px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
 .shadow-xl{
   --tw-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
   --tw-shadow-colored: 0 20px 25px -5px var(--tw-shadow-color), 0 8px 10px -6px var(--tw-shadow-color);
-  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
-}
-
-.shadow-2xl{
-  --tw-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
-  --tw-shadow-colored: 0 25px 50px -12px var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
@@ -2178,6 +2199,11 @@ section{
     margin-right: 0px;
   }
 
+  .md\:size-16{
+    width: 4rem;
+    height: 4rem;
+  }
+
   .md\:h-\[400px\]{
     height: 400px;
   }
@@ -2186,12 +2212,20 @@ section{
     height: 550px;
   }
 
+  .md\:w-\[370px\]{
+    width: 370px;
+  }
+
   .md\:w-\[380px\]{
     width: 380px;
   }
 
   .md\:flex-row{
     flex-direction: row;
+  }
+
+  .md\:p-20{
+    padding: 5rem;
   }
 
   .md\:text-left{
@@ -2206,6 +2240,16 @@ section{
 
 .\[\&\>a\]\:flex>a{
   display: flex;
+}
+
+.\[\&\>a\]\:size-12>a{
+  width: 3rem;
+  height: 3rem;
+}
+
+.\[\&\>a\]\:size-10>a{
+  width: 2.5rem;
+  height: 2.5rem;
 }
 
 .\[\&\>a\]\:h-12>a{
@@ -2235,6 +2279,13 @@ section{
 .\[\&\>a\]\:border-\[\#e2e2e2\]>a{
   --tw-border-opacity: 1;
   border-color: rgb(226 226 226 / var(--tw-border-opacity));
+}
+
+@media (min-width: 768px){
+  .md\:\[\&\>a\]\:size-12>a{
+    width: 3rem;
+    height: 3rem;
+  }
 }
 
 .\[\&\>span\]\:flex>span{
