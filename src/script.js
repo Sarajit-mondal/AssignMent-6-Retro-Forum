@@ -11,10 +11,34 @@
 
 const viewListContainer = document.getElementById("marks-container");
 const latestContainer = document.getElementById("latest-container");
+const lodderEl = document.getElementById("lodder");
+const errowEl = document.getElementById("errow");
+const errorName = document.getElementById("errow-name");
 
 let readList = 0;
 const allData = "all";
 const latestData = "latest";
+
+// search data
+const searchdata = async (category) => {
+  try {
+    const res = await fetch(
+      `https://openapi.programming-hero.com/api/retro-forum/posts?category=${category}`
+    );
+    const data = await res.json();
+    const posts = data.posts;
+    if (posts.length === 0) {
+      lodderEl.classList.add("hidden");
+      errowEl.classList.remove("hidden");
+      errorName.innerText = "No Data";
+    }
+    createForum(posts);
+  } catch (error) {
+    lodderEl.classList.add("hidden");
+    errowEl.classList.remove("hidden");
+    errorName.innerText = error.message;
+  }
+};
 
 const findForumData = async (category, isData) => {
   const res = await fetch(
@@ -129,6 +153,17 @@ function latestForum(posts) {
 }
 
 // search forum here
+function searchForum() {
+  const searchEl = document.getElementById("search-file");
+  const search = searchEl.value;
+  const searchText = search.trim().toLowerCase();
+  if (searchText) {
+    lodderEl.classList.remove("hidden");
+    setTimeout(() => {
+      searchdata(searchText, allData);
+    }, 2000);
+  }
+}
 
-findForumData("posts", allData);
-findForumData("latest-posts", latestData);
+// findForumData("posts", allData);
+// findForumData("latest-posts", latestData);
