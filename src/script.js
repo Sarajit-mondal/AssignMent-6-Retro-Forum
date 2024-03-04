@@ -33,6 +33,9 @@ const searchdata = async (category) => {
     if (posts.length === 0) {
       lodderEl.classList.add("hidden");
       errowEl.classList.remove("hidden");
+      document.getElementById(
+        "errow-title"
+      ).innerText = `This ${category} Data didn't find`;
       errorName.innerText = "No Data";
     }
     createForum(posts);
@@ -74,8 +77,10 @@ function createForum(posts) {
       "bg-[#797DFC1A] p-6  rounded-2xl flex flex-col md:flex-row gap-5 hover:border-2 hover:border-[#797DFC] hover:bg-[#797DFC21] cursor-pointer shadow-xl";
     div.innerHTML = `
     <!-- profile -->
-                <div class="size-[72px] md:size-16 rounded-xl bg-light-color relative mx-auto">
-                    <img src="https://cdn-icons-png.flaticon.com/512/3001/3001758.png" alt="" class="w-auto h-auto">
+                <div class="size-[72px] md:size-16 rounded-xl  bg-light-color relative mx-auto">
+                    <img src=${
+                      data.image
+                    } alt="" class="w-auto rounded-xl h-auto ">
                     <span id="online" class="w-3 h-3 ${
                       data.isActive ? "bg-[#10B981]" : "bg-[#FF3434]"
                     }  block rounded-full absolute -top-1 -right-1"></span>
@@ -149,7 +154,7 @@ function latestForum(posts) {
     <h2 class="card-title font-extrabold">${data.title}</h2>
     <p class="font-bold text-gray-color">${data.description}</p>
     <div class="flex space-x-3">
-      <img src="https://cdn-icons-png.flaticon.com/512/4139/4139981.png" alt=" " class="w-11 rounded-full h-11">
+      <img src=${data.profile_image} alt=" " class="w-11 rounded-full h-11">
       <span>
         <h4 class="text-lg font-extrabold">${data.author.name}</h4>
         <p>${data.author.designation ? data.author.designation : "Unknown"}</p>
@@ -168,8 +173,11 @@ function searchForum() {
   const search = searchEl.value;
   const searchText = search.trim().toLowerCase();
 
-  if (searchText) {
+  if (searchText != "") {
     allFormContainer.innerHTML = "";
+    errowEl.classList.add("hidden");
+  }
+  if (searchText) {
     lodderEl.classList.remove("hidden");
     setTimeout(() => {
       searchdata(searchText, allData);

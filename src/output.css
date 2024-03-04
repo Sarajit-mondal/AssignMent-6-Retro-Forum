@@ -1837,6 +1837,10 @@ section{
   width: 91.666667%;
 }
 
+.w-3\/4{
+  width: 75%;
+}
+
 .max-w-xs{
   max-width: 20rem;
 }
@@ -1926,6 +1930,10 @@ section{
   --tw-space-y-reverse: 0;
   margin-top: calc(1.5rem * calc(1 - var(--tw-space-y-reverse)));
   margin-bottom: calc(1.5rem * var(--tw-space-y-reverse));
+}
+
+.overflow-hidden{
+  overflow: hidden;
 }
 
 .text-nowrap{
@@ -2220,8 +2228,16 @@ section{
     width: 380px;
   }
 
+  .md\:w-2\/4{
+    width: 50%;
+  }
+
   .md\:flex-row{
     flex-direction: row;
+  }
+
+  .md\:rounded-xl{
+    border-radius: 0.75rem;
   }
 
   .md\:p-20{
