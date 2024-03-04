@@ -39,18 +39,25 @@ const searchdata = async (category) => {
     errorName.innerText = error.message;
   }
 };
-
+// all forum data
 const findForumData = async (category, isData) => {
-  const res = await fetch(
-    `https://openapi.programming-hero.com/api/retro-forum/${category}`
-  );
-  const data = await res.json();
-  const posts = data.posts;
+  try {
+    const res = await fetch(
+      `https://openapi.programming-hero.com/api/retro-forum/${category}`
+    );
+    const data = await res.json();
+    const posts = data.posts;
 
-  if (isData === "all") {
-    createForum(posts);
-  } else if (isData === "latest") {
-    latestForum(data);
+    lodderEl.classList.add("hidden");
+    if (isData === "all") {
+      createForum(posts);
+    } else if (isData === "latest") {
+      latestForum(data);
+    }
+  } catch (error) {
+    lodderEl.classList.add("hidden");
+    errowEl.classList.remove("hidden");
+    errorName.innerText = error.message;
   }
 };
 
@@ -164,6 +171,13 @@ function searchForum() {
     }, 2000);
   }
 }
+
+// 2 s delay call
+lodderEl.classList.remove("hidden");
+setTimeout(() => {
+  findForumData("posts", allData);
+  findForumData("latest-posts", latestData);
+}, 2000);
 
 // findForumData("posts", allData);
 // findForumData("latest-posts", latestData);
