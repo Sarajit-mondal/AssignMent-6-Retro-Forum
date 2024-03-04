@@ -69,7 +69,7 @@ function createForum(posts) {
   for (let data of posts) {
     const div = document.createElement("div");
     div.className =
-      "bg-[#797DFC1A] p-6  rounded-2xl flex flex-col md:flex-row gap-5 hover:border-2 hover:border-[#797DFC] hover:bg-[#797DFC21] cursor-pointer";
+      "bg-[#797DFC1A] p-6  rounded-2xl flex flex-col md:flex-row gap-5 hover:border-2 hover:border-[#797DFC] hover:bg-[#797DFC21] cursor-pointer shadow-xl";
     div.innerHTML = `
     <!-- profile -->
                 <div class="w-16 h-16 rounded-xl bg-light-color relative mx-auto">
@@ -117,7 +117,7 @@ function makeAsRead(title, view) {
   document.getElementById("view-count").innerText = readList;
   const div = document.createElement("div");
   div.className =
-    "flex justify-between items-center bg-light-color p-4 rounded-2xl gap-2 my-4";
+    "flex justify-between items-center bg-light-color p-4 rounded-2xl gap-2 my-4 shadow-xl";
   div.innerHTML = `
   <h4 class="font-extrabold">${title}</h4>
                  <div class="space-x-3  font-bold text-gray-color flex items-center"><i class="fa-regular fa-eye"></i><span>${view}</span></div>
