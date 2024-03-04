@@ -175,6 +175,7 @@ function searchForum() {
       searchdata(searchText, allData);
     }, 2000);
   }
+  searchEl.value = "";
 }
 
 findForumData("posts", allData);
