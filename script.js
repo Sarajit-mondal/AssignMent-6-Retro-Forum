@@ -165,8 +165,9 @@ function searchForum() {
   const searchEl = document.getElementById("search-file");
   const search = searchEl.value;
   const searchText = search.trim().toLowerCase();
-  allFormContainer.innerHTML = "";
+
   if (searchText) {
+    allFormContainer.innerHTML = "";
     lodderEl.classList.remove("hidden");
     setTimeout(() => {
       searchdata(searchText, allData);
