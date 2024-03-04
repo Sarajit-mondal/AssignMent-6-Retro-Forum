@@ -2075,6 +2075,11 @@ section{
   padding-bottom: 0.25rem;
 }
 
+.px-5{
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+}
+
 .pb-5{
   padding-bottom: 1.25rem;
 }
@@ -2250,6 +2255,11 @@ section{
 
   .md\:text-6xl{
     font-size: 3.75rem;
+    line-height: 1;
+  }
+
+  .md\:text-5xl{
+    font-size: 3rem;
     line-height: 1;
   }
 }
